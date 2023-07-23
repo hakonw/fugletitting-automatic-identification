@@ -36,7 +36,7 @@ function blobToBirnet(blob) {
     credentials: "omit",
     method: "POST",
     body: fd,
-    mode: "no-cors",
+    mode: "cors",
   });
 }
 
