@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Bird",
+  "version": "1",
+  "author": "Håkon Wardeberg",
+  "description": "Automatically search sounds from NatureId on Birdnet",
+  "permissions": ["webRequest", "scripting"],
+  "host_permissions": [
+    "https://quiz.natureid.no/*",
+    "https://birdnet.cornell.edu/api/upload"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://quiz.natureid.no/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  }
+}
