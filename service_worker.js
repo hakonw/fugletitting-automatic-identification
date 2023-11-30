@@ -100,5 +100,10 @@ function processWebRequest(details) {
 
 chrome.webRequest.onCompleted.addListener(
   (details) => processWebRequest(details),
-  { urls: ["https://quiz.natureid.no/*.mp3"] }
+  {
+    urls: [
+      "https://quiz.natureid.no/*.mp3",
+      "https://quiz.natureid.no/IDprogram/getMedia.php*",
+    ],
+  }
 );
