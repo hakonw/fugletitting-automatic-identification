@@ -78,6 +78,7 @@ function processWebRequest(details) {
   var url = details.url;
   var tabId = details.tabId;
   if (urls.includes(url)) {
+    // Most likely our own request
     return;
   }
 
@@ -85,7 +86,8 @@ function processWebRequest(details) {
   urls.push(url);
 
   // Currently no good way to look at the request response
-  // So fetch the sound again, but this time on our terms
+  // Alternative is to rewrite it as a chrome.devtools extension
+  // Doing it dirty by fetching the sound again, but this time on our terms
   fetchSound(url)
     .then((t) => logAndPass(t))
     .then((response) => response.blob())

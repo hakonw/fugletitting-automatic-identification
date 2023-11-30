@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener((birds, _, __) => {
 
   Array.from(quizButtonElements).forEach((button) => {
     let text = button.innerText; // "Scops Owl\n(Otus scops)""
-    let scientificName = text.match(re)[1].toLowerCase();
+    let scientificName = text.match(re)[1].toLowerCase(); // Otus scops
     let bird = birds.find((b) => b.species.toLowerCase() == scientificName);
     if (bird != undefined) {
       button.innerText += "\n" + bird.score;
