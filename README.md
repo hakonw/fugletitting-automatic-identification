@@ -7,9 +7,10 @@ Then shows a summary of the results in the options.
 
 Using this program to cheat on any academic exam or competition is not allowed.
 
-# Install
+# Install extension
 
-Clone the project, go to `edge://extensions` or `chrome://extensions`, enable Developer mode, select `Load unpacked`.
+Clone the project, go to `edge://extensions` or `chrome://extensions`, enable Developer mode, select `Load unpacked`, and chose the extension folder.
 
 The extension should (after a refresh) work, and add the percentage to the label if the species is amount the top 10 matches.
+
 
